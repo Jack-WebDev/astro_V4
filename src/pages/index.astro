@@ -2,9 +2,30 @@
 
 ---
 import Layout from "../layouts/Layout.astro"
+import Button from "../components/Button.astro"
 ---
 
 <Layout>
-    <h1>Yooo</h1>
+    <section aria-label="Hero-Section">
+        <div class="hero__img">
+            <img src="/assets/nubelson-fernandes-gTs2w7bu3Qo-unsplash.jpg" alt="">
+        </div>
+
+        <div class="hero__content">
+            <h1>Hi there! I'm <span style='font-family: "Vujahday Script", cursive;'>Jack</span>, and I enjoy transforming ideas into captivating digital experiences.</h1>
+            <Button></Button>
+        </div>
+    </section>
 </Layout>
+
+
+<style>
+    .hero__content {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        text-align: center;
+    }
+</style>
+
 

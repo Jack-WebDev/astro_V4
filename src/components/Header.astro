@@ -50,7 +50,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap
+  position: relative;
 }
 
 .skip__nav {
@@ -115,15 +115,16 @@
   display: grid;
   place-items: center;
   align-items: center;
-  background-color: rgb(255 255 255 / .5);
+  background-color: rgb(255 255 255);
   width: 100%;
   margin-block-start: 1rem;
   padding: 2em;
   gap: 1rem;
   border-radius: 10px;
-  transform: translateY(-150%);
+  transform: translateY(-200%);
   transition: transform 300ms ease-in;
   list-style: none;
+  position: absolute;
 }
 
 .nav__item {
@@ -140,12 +141,12 @@
 }
 
 .nav__link:hover {
-  color: var(--clr-accent-2);
+  text-decoration: 2px underline var(--clr-accent-1);
 }
 
 
 .nav__menu.active {
-  transform: translateY(0);
+  transform: translateY(61%);
 }
 
 .navbar .hamburger.active .bar:nth-child(2) {
