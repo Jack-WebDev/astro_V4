@@ -7,13 +7,32 @@ import Button from "../components/Button.astro"
 
 <Layout>
     <section aria-label="Hero-Section">
-        <div class="hero__img">
-            <img src="/assets/nubelson-fernandes-gTs2w7bu3Qo-unsplash.jpg" alt="">
-        </div>
-
         <div class="hero__content">
             <h1>Hi there! I'm <span style='font-family: "Vujahday Script", cursive;'>Jack</span>, and I enjoy transforming ideas into captivating digital experiences.</h1>
-            <Button></Button>
+            <Button />
+        </div>
+    </section>
+
+    <section aria-label="About">
+        <div class="about">
+            <div class="about__img">
+
+            </div>
+
+            <div class="about__content">
+                <h2>About Me</h2>
+
+                <p>Hello, and welcome to my portfolio! I'm Jack, a passionate software developer who enjoys crafting digital experiences that leave a lasting impression. As a software developer, I thrive on turning ideas into reality through code. My journey as a software developer has been an exciting one, filled with countles opportunities to learn, grow, and create.</p>
+
+                <p>In my spare time, I enjoy contributing to the open-source community, attending tech meetups, and participating in hackathons. These activities allow me to engage with other talented professionals and broaden my knowledge base.</p>
+
+                <p>I am thrilled by the opportunity to work on challenging projects that have a meaningful impact. If you are looking for a dedicated and versatile software developer who can bring your ideas to life, I would love to connect with you. Let's collaborate and create exceptional software together.</p>
+
+                <p>Thank you for taking the time to visit my portfolio. I look forward to hearing from you!</p>
+
+                <Button title="Go To My Portfolio" />
+
+            </div>
         </div>
     </section>
 </Layout>
@@ -24,7 +43,45 @@ import Button from "../components/Button.astro"
         display: grid;
         justify-items: center;
         align-content: center;
+        gap: 2rem;
         text-align: center;
+        padding-block: 8rem;
+        color: #fff;
+        background: rgb(0 0 0 / .5);
+        background-image: url(/assets/nubelson-fernandes-small.jpg);
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -100px;
+    }
+
+    h1 {
+        width: min(90%, 700px);
+        margin: auto;
+        font-size: clamp(1.4rem, 2vw + .5rem, 2rem);
+    }
+
+    .about {
+        width: min(90%, 1200px);
+        margin: auto;
+        padding-block: 2rem;
+        text-align: center;
+    }
+
+    .about__content {
+        display: grid;
+        justify-items: center;
+        gap: 2rem;    
+    }
+
+    .about__content h2 {
+        font-size: clamp(2rem, 2vw + .5rem, 3rem);
+        color: var(--clr-accent-3);
+    }
+
+    .about__content p {
+        font-size: clamp(1.2rem, 1.2vw + .5rem, 2rem);
+
     }
 </style>
 

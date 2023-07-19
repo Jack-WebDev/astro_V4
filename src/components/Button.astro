@@ -1,11 +1,32 @@
 
-<button>Let's Work Together</button>
+---
+export interface Props {
+    title?: string;
+}
+
+
+const { title = "Let's Talk"} = Astro.props as Props;
+---
+
+
+<button>{ title }</button>
 
 <style>
     button {
         border: none;
+        /* background-color: var(--clr-primary); */
         background-color: #fff;
-        padding: .5em 1em;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: .8em;
+        color: var(--clr-accent-3);
+        border-radius: 10px;
+        transform: scale(1);
+        transition: transform 500ms ease-in-out;
+    }
+
+    button:hover {
         color: #000;
+        transform: scale(1.1);
     }
 </style>
