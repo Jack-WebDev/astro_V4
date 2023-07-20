@@ -16,7 +16,7 @@ import Button from "./Button.astro";
         display: grid;
         place-items: center;
         gap: 2rem;
-        margin-block: 4rem;
+        margin-block: 2rem;
         text-align: center;
         width: min(90%, 1400px);
         margin-inline: auto;
@@ -30,6 +30,8 @@ import Button from "./Button.astro";
         section {
             gap: unset;
             grid-template-columns: 1fr 1fr;
+            border-top: 1px solid var(--clr-accent-2);
+            padding-block: 2rem;
         }
 
         h2 {
