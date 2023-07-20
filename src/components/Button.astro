@@ -14,9 +14,8 @@ const { title = "Let's Talk"} = Astro.props as Props;
 <style>
     button {
         border: none;
-        /* background-color: var(--clr-primary); */
         background-color: #fff;
-        font-size: 1.1rem;
+        font-size: clamp(1.2rem, 1.5vw + .5rem, 1.5rem);
         font-weight: 600;
         padding: .8em;
         color: var(--clr-accent-3);

@@ -1,6 +1,7 @@
 
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/footer.astro";
 import "../styles/reset.css";
 export interface Props {
 	title?: string;
@@ -27,12 +28,14 @@ const {title = "Jack WebDev | Design, Online Marketing & Website Development"} =
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Lato:ital@1&family=Vujahday+Script&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53f1cddc49.js" crossorigin="anonymous"></script>
 
     <title>{title}</title>
 </head>
 <body>
 	<Header/>
 	<slot/>
+    <Footer />
 </body>
 </html>
 

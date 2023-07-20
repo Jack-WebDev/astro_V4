@@ -1,12 +1,141 @@
 
 
-<footer>
-    <nav>
-        <div class="logo">
-            
+<footer aria-label="footer">
+  
+    <nav class="footer__navbar" aria-label="footer__navigation">  
+      <a aria-label="Logo" aria-hidden="true" href="/" class="logo">
+        <span class="j">J</span>ack 
+        <span class="w">W</span>ebDev
+      </a>
+  
+        <ul class="nav__menu" id="navMenu">
+            <li class="nav__item about_item"><a href="#services" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item design_item"><a href="/design" class="nav__link" target="_blank">Design</a>
+            </li>
+            <li class="nav__item website_item"><a href="/webDesign" class="nav__link" target="_blank">Web Design</a>
+            </li>
+            <li class="nav__item marketing_item"><a href="/marketing" class="nav__link" target="_blank">Online Marketing</a>
+            </li>
+        </ul>
+
+        <div class="contact_details">
+            <div class="socials">
+                <a href="https://github.com/Jack-WebDev"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/katlegomabaso/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p><i class="fa-solid fa-envelope"></i>jackwebdev31@gmail.com</p>
         </div>
-        <div class="socials"></div>
     </nav>
 </footer>
 
+<style>
+
+    footer {
+        background-color: #fff;
+        padding-block: 2rem;
+    }
+    
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      font-size: 1rem;
+      font-weight: var(--fw-600);
+      text-decoration: none;
+      color: var(--clr-accent-3);
+    }
+    
+    .j,.w {
+      font-size: 3em;
+      font-family: "Vujahday Script", cursive;
+      font-weight: var(--fw-600);
+    }
+    
+    .j:hover, .w:hover {
+      color: var(--clr-accent-2);
+    }
+
+    .nav__menu {
+      display: grid;
+      place-items: center;
+      background-color: rgb(255 255 255);
+      margin-block-start: 1rem;
+      gap: 1rem;
+      border-radius: 10px;
+      list-style: none;
+    }
+    
+    .nav__item {
+      display: flex;
+      align-items: baseline;
+      gap: .3rem;
+    }
+    
+    .nav__menu .nav__link {
+      font-size: 1.3rem;
+      font-weight: var(--fw-600);
+      color: var(--clr-accent-3);
+      text-decoration: none;
+    }
+    
+    .nav__link:hover {
+      text-decoration: 2px underline var(--clr-accent-1);
+    }
+
+    .contact_details {
+        display: grid;
+        place-items: center;
+        gap: 1rem;
+        margin-block-start: 2rem;
+    }
+
+    .contact_details .socials {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .contact_details .socials i {
+        font-size: 30px;
+        color: var(--clr-accent-3);
+    }
+
+    .contact_details p {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--clr-accent-3);
+    }
+    
+    
+    @media screen and (min-width: 768px) {
+
+        .footer__navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .nav__menu {
+            margin: unset;
+            grid-template-columns: 1fr 1fr;
+        }
+    
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        .nav__menu {
+            gap: unset;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .contact_details {
+            grid-template-columns: 1fr 1fr;
+            margin: unset;
+        }
+    }
+    
+</style>
+    
 
