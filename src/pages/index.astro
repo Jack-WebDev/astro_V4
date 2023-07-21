@@ -7,8 +7,9 @@ import CTA from "../components/CTA.astro";
 ---
 
 <Layout>
-    <section aria-label="Hero-Section">
+    <section aria-label="Hero-Section" class="hero__section">
         <div class="hero__content">
+            <img src="/assets/nubelson-fernandes-mid.jpg" alt="">
             <h1>Crafting Digital Brilliance: Elevating your Business Through Code.</h1>
             <Button title="Let's Work Together" />
         </div>
@@ -58,6 +59,7 @@ import CTA from "../components/CTA.astro";
         background-position-x: -100px;
     }
 
+
     h1 {
         width: min(90%, 700px);
         margin: auto;
@@ -85,6 +87,42 @@ import CTA from "../components/CTA.astro";
     .about__content p {
         font-size: clamp(1.2rem, 1.2vw + .5rem, 2rem);
 
+    }
+
+    img {
+        display: none;
+    }
+
+    @media screen and (min-width: 1024px) {
+        
+        .hero__section {
+            margin-block-start: 3rem;
+            margin-block-end: 5rem;
+        }
+        .hero__content {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "img h1" "img button";
+            background-image: none;
+            background-color: transparent;
+            padding: unset;
+            width: min(90%, 1400px);
+            margin-inline: auto;
+        }
+
+        img {
+            display: inline-block;
+            grid-area: img;
+            border-radius: 5px;
+        }
+
+        h1 {
+            grid-area: h1;
+        }
+
+        button {
+            grid-area: button;
+        }
     }
 </style>
 
