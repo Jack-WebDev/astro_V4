@@ -1,0 +1,31 @@
+
+---
+
+import Card from "./Card.astro";
+
+
+const servicesData = [
+    {
+        title: 'Design'
+    },
+    {
+        title: 'Web Design'
+    },
+    {
+        title: 'Online Marketing'
+    },
+]
+---
+
+
+<section aria-label="Service">
+        {servicesData.map(service => {
+            <Card>
+                {service.title}    
+            </Card>
+        })}
+</section>
+
+
+
+

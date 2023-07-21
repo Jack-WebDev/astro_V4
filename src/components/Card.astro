@@ -1,0 +1,23 @@
+
+---
+export interface Props {
+    title?:string,
+}
+
+const { title } = Astro.props as Props;
+---
+
+<div class="card">
+    <h3>{title}</h3>
+</div>
+
+
+
+<style>
+    .card {
+        background-color: aqua;
+        width: 100px;
+        aspect-ratio: 1;
+    }
+</style>
+

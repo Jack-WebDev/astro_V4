@@ -4,6 +4,7 @@
 import Layout from "../layouts/Layout.astro"
 import Button from "../components/Button.astro"
 import CTA from "../components/CTA.astro";
+import Services from "../components/Services.astro";
 ---
 
 <Layout>
@@ -32,12 +33,13 @@ import CTA from "../components/CTA.astro";
 
                 <p>Thank you for taking the time to visit my portfolio. I look forward to hearing from you!</p>
 
-                <Button title="Go To My Portfolio" />
+                <!-- <Button title="Go To My Portfolio" /> -->
 
             </div>
         </div>
     </section>
 
+    <Services />
     <CTA />
 </Layout>
 
@@ -107,7 +109,7 @@ import CTA from "../components/CTA.astro";
             background-image: none;
             background-color: transparent;
             padding: unset;
-            width: min(90%, 1400px);
+            width: min(75%, 1100px);
             margin-inline: auto;
         }
 
