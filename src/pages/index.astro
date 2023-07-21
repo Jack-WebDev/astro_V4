@@ -4,7 +4,7 @@
 import Layout from "../layouts/Layout.astro"
 import Button from "../components/Button.astro"
 import CTA from "../components/CTA.astro";
-import Services from "../components/Services.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
@@ -39,7 +39,13 @@ import Services from "../components/Services.astro";
         </div>
     </section>
 
-    <Services />
+    <section aria-label="Services" class="cards__container">
+        <h2>Services</h2>
+        <Card title="Design" link="design" image="Design"/>
+        <Card title="Web Design" link="webDesign" image="WebDev"/>
+        <Card title="Online Marketing" image="Marketing"/>
+    </section>
+
     <CTA />
 </Layout>
 
@@ -94,6 +100,20 @@ import Services from "../components/Services.astro";
 
     img {
         display: none;
+    }
+
+    .cards__container {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        gap: 2rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        .cards__container {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     @media screen and (min-width: 1024px) {

@@ -2,22 +2,32 @@
 ---
 export interface Props {
     title?:string,
+    link?:string,
+    image?: string,
 }
 
-const { title } = Astro.props as Props;
+const { title, link, image } = Astro.props as Props;
 ---
 
-<div class="card">
-    <h3>{title}</h3>
+<div class="card" style=`background-image: url(/assets/PNG/${image}-BG.jpg);`>
+    <a href=`/${link}`><h3>{title}</h3></a>
 </div>
-
 
 
 <style>
     .card {
-        background-color: aqua;
-        width: 100px;
-        aspect-ratio: 1;
+        padding: 2rem;
+        background-color: rgb(0 0 0 / .5);
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+    }
+
+    .card a {
+        color: #fff;
+        text-decoration: none;
     }
 </style>
+
 
