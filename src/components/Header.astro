@@ -23,13 +23,13 @@
 
         <ul class="nav__menu" id="navMenu">
             <li class="nav__item design_item">
-            <span aria-hidden="true">1.</span><a href="/design" class="nav__link" target="_blank">Design</a>
+            <span aria-hidden="true">1.</span><a href="/design" class="nav__link" target="_blank">Home</a>
             </li>
             <li class="nav__item website_item">
-            <span aria-hidden="true">2.</span><a href="/webDesign" class="nav__link" target="_blank">Web Design</a>
+            <span aria-hidden="true">2.</span><a href="/webDesign" class="nav__link" target="_blank">Portfolio</a>
             </li>
             <li class="nav__item marketing_item">
-            <span aria-hidden="true">3.</span><a href="/marketing" class="nav__link" target="_blank">Online Marketing</a>
+            <span aria-hidden="true">3.</span><a href="/marketing" class="nav__link" target="_blank">Contact Me</a>
             </li>
         </ul>
   </nav>
@@ -39,7 +39,7 @@
 <style>
 
 .header {
-  width: min(90%, 1100px);
+  width: min(90%, 1500px);
   margin-inline: auto;
   padding-inline: 1rem;
 }
@@ -76,17 +76,21 @@
   font-size: 1rem;
   font-weight: var(--fw-600);
   text-decoration: none;
-  color: var(--clr-accent-3);
+  color: #fff;
 }
 
 .j,.w {
   font-size: 3em;
   font-family: "Vujahday Script", cursive;
   font-weight: var(--fw-600);
+  color: var(--clr-accent-3);
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
 }
 
 .j:hover, .w:hover {
   color: var(--clr-accent-2);
+  transform: scale(1.1);
 }
 
 .hamburger {
@@ -130,15 +134,20 @@
   gap: .3rem;
 }
 
+.nav__item span {
+  color: var(--clr-accent-3);
+}
+
 .nav__menu .nav__link {
   font-size: 1.3rem;
   font-weight: var(--fw-600);
-  color: var(--clr-accent-3);
+  color: #fff;
   text-decoration: none;
+  transition: 200ms ease-in;
 }
 
 .nav__link:hover {
-  text-decoration: 2px underline var(--clr-accent-1);
+  color: rgb(255 69 0);
 }
 
 

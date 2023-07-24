@@ -1,9 +1,9 @@
 
 :root {
-	--clr-primary:rgb(221, 208, 200);
+	--clr-primary:rgb(0 0 0 / .85);
 	--clr-accent-1:rgb(0 0 0);
 	--clr-accent-2:rgb(255 255 255);
-	--clr-accent-3:rgb(125, 90, 80);
+	--clr-accent-3:orangered;
 
 	--ff-primary:'Lato', sans-serif;
 	--ff-secondary:'GFS Didot', serif;
@@ -49,6 +49,7 @@ html:focus-within {
 /* Set core body defaults */
 body {
   background-color: var(--clr-primary);
+  color: #fff;
   font-family: var(--ff-primary);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
