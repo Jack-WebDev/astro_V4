@@ -1,8 +1,10 @@
 
 :root {
-	--clr-primary:rgb(0 0 0 / .85);
+	/* --clr-primary:rgb(0 0 0 / .85); */
+  --clr-primary: #f4f8ff;
 	--clr-accent-1:rgb(0 0 0);
-	--clr-accent-2:rgb(255 255 255);
+	/* --clr-accent-2:rgb(255 255 255); */
+  --clr-accent-2: #050c43;
 	--clr-accent-3:orangered;
 
 	--ff-primary:'Lato', sans-serif;
